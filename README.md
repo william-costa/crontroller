@@ -11,5 +11,8 @@ Gerenciador centralizado de cronjobs em PHP e Shell
 - PHP não deverá executar diretamente um comando de cron, o PHP executará um arquivo shell que encapsulará o comando e identificará o ID de cada processo e também gravará os logs e status do processo
 - Por padrão, não permitir que um cronjob concorra com ele mesmo (não executar duas vezes o mesmo comando)
 - Padrão para aplicação de parâmetros nos cronjobs para definir se pode haver concorrencia (um mesmo cronjob ser executado enquanto outro processo dele mesmo ainda não foi finalizado), timeout, quantas vezes o sistema pode ignorar a sua execução (caso já tenha um processo dele mesmo rodando)
-- Interface CLI para analisar os logs de execução (quando um cronjob foi executado pela ultima vez, status atual, se foi interrompido, etc) e listagem dos crons com status de ativo ou inválido
+- Interface CLI para analisar os logs de execução (quando um cronjob foi executado pela ultima vez, status atual, se foi interrompido, etc), listagem dos crons com status de ativo ou inválido e subir um servidor de teste de crons (worker para rodar testes locais de cronjobs)
+
+## Essencial
+- Criar branches para desenvolvimento
 
