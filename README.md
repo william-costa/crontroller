@@ -2,7 +2,7 @@
 Gerenciador centralizado de cronjobs em PHP e Shell
 
 ## Features a serem desenvolvidas:
-- O sistema deve possuir um arquivo de configuração que será usado para definir onde está o arquivo crons.cron e onde é o caminho base (`{{DIR}}`) para que os cronjobs possam ser configurados dinamicamente
+- O sistema deve possuir um arquivo de configuração que será usado para definir onde está o arquivo crons.cron, onde é o caminho base (`{{DIR}}`) para que os cronjobs possam ser configurados dinamicamente e usuário e senha de acesso ao painel no navegador.
 - O sistema deve ter um arquivo crons.cron que será usado como base para configuração dos cronjobs gerenciados pelo crontroller, seguindo o padrão do crontab do linux (a ideia é que o usuário possa copiar os comandos do crontab atual e colar no gerenciador e esse já funcionar)
 - O sistema deve ter um arquivo central que será executado a cada minuto (único cronjob configurado diretamente no crontab do linux)
 - O sistema deve possuir meios de identificar cronjobs (IDs) para que possam ser validados os processos iniciados, finalizados e interrompidos
@@ -12,6 +12,7 @@ Gerenciador centralizado de cronjobs em PHP e Shell
 - Por padrão, não permitir que um cronjob concorra com ele mesmo (não executar duas vezes o mesmo comando)
 - Padrão para aplicação de parâmetros nos cronjobs para definir se pode haver concorrencia (um mesmo cronjob ser executado enquanto outro processo dele mesmo ainda não foi finalizado), timeout, quantas vezes o sistema pode ignorar a sua execução (caso já tenha um processo dele mesmo rodando)
 - Interface CLI para analisar os logs de execução (quando um cronjob foi executado pela ultima vez, status atual, se foi interrompido, etc), listagem dos crons com status de ativo ou inválido e subir um servidor de teste de crons (worker para rodar testes locais de cronjobs)
+- O sistema deverá oferecer um acesso via navegador (html) para exibir os gráficos e informações sobre cronjobs configurados, status, ultima execução, etc (como na interface CLI). Esse acesso deve ser restringido por senha (pode ser basic auth e a senha configurada no arquivo de configurações descrito no primeiro item)
 
 ## Essencial
 - Criar branches para desenvolvimento
