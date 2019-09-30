@@ -1,0 +1,16 @@
+{
+  "notify":{
+    "email":"email@email.com"
+  },
+  "smtp":{
+    "host":"",
+    "port":"",
+    "security":"",
+    "user":"",
+    "pass":"",
+    "from":{
+      "name":"Crontoller",
+      "email":"crontroller@email.com"
+    }
+  }
+}

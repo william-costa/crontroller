@@ -1,0 +1,20 @@
+{
+    "name": "crontroller",
+    "require": {
+        "php": ">=7.0"
+    },
+    "authors": [
+        {
+            "name": "William Costa",
+            "email": "costa.williamsc@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
