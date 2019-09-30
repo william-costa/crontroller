@@ -7,6 +7,11 @@ ________________
 
 ### Configuração
 
+Inicialize do composer para baixar as dependências
+```Shell
+ composer install
+```
+
 Para executar o Crontroller manualmente basta executar o comando abaixo:
 
 ```Shell
