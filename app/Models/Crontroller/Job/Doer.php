@@ -9,9 +9,9 @@
  *
  */
 
- namespace App\Models\Crontroller;
+ namespace App\Models\Crontroller\Job;
 
- class Doer{
+ class Doer extends \App\Models\Crontroller\Crontroller{
 
    /**
     * Método responsável por chamar as classes e métodos de executação de jobs
