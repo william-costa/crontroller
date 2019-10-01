@@ -2,6 +2,12 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
- $controller = new \App\Models\Crontroller\Job\Doer;
+ $indexer  = new \App\Models\Crontroller\Job\Indexer;
 
- return $controller;
+ $parser   = new \App\Models\Crontroller\Job\Parser($indexer);
+
+ $sender   = new \App\Models\Crontroller\Job\Sender;
+
+ $analyzer = new \App\Models\Crontroller\Job\Analyzer($parser,$sender);
+
+ return new \App\Models\Crontroller\Job\Doer($analyzer);

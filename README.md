@@ -21,6 +21,18 @@ Configure o comando acima para rodar a cada 1 minuto em seu crontab.
 
 ________________
 
+#### Fluxo de execução a ser desenvolvido
+
+
+1 - Quando não existem alterações nos jobs:
+*Doer -> Analyzer -> Sender*
+
+2 - Quando existem alterações nos jobs (jobs novos, alterações em jobs existentes ou jobs excluídos):
+*Doer -> Analyzer -> Parser -> Indexer*
+
+
+________________
+
 ## A ser desenvolvido:
 
 ### Features:
