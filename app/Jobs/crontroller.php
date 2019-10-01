@@ -7,7 +7,7 @@
  *
  */
 
- $controllerDoer = require(__DIR__.'/../../bootstrap/job.php');
- $success = $controllerDoer->run();
+ $controller = require(__DIR__.'/../../bootstrap/job.php');
+ $success = $controller->run();
 
  echo 'Finalizado';

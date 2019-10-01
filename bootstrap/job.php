@@ -2,8 +2,6 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
- use \App\Models\Crontroller\Doer;
+ $controller = new \App\Models\Crontroller\Job\Doer;
 
- $controllerDoer = new Doer;
-
- return $controllerDoer;
+ return $controller;
