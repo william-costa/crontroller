@@ -12,6 +12,7 @@
  namespace App\Models\Crontroller\Job;
 
  use \App\Models\Crontroller\CrontrollerInterface\Job\Indexer;
+ use \App\Models\Crontroller\CrontrollerInterface\Job\Analyzer;
 
  class Parser implements \App\Models\Crontroller\CrontrollerInterface\Job\Parser{
 
@@ -30,5 +31,14 @@
      $this->indexer = $indexer;
    }
 
+   /**
+    * Método responsável por executar as ações da classe
+    * @method run
+    * @param  Analyzer    $analyzer
+    * @return boolean
+    */
+   public function run(Analyzer $analyzer){
+     return $this->indexer->run($this);
+   }
 
  }

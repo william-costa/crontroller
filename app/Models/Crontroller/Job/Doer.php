@@ -19,24 +19,24 @@
     * Instancia de Analyzer
     * @var Analyzer
     */
-   private $analizer = null;
+   private $analyzer = null;
 
    /**
     * Construtor responsável por definir as instancias necessárias para a execução do Doer
     * @method __construct
     * @param  Analyzer    $analizer
     */
-   public function __construct(Analyzer $analizer){
-     $this->analizer = $analizer;
+   public function __construct(Analyzer $analyzer){
+     $this->analyzer = $analyzer;
    }
 
    /**
-    * Método responsável por chamar as classes e métodos de execução de jobs
+    * Método responsável por executar o analyzer
     * @method run
     * @return boolean
     */
    public function run(){
-     return true;
+     return $this->analyzer->run();
    }
 
  }
