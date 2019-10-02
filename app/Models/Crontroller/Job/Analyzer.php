@@ -39,4 +39,22 @@
      $this->sender = $sender;
    }
 
+   /**
+    * Método responsável por verificar se existem alterações nos jobs
+    * @method checkForUpdates
+    * @return boolean
+    */
+   private function checkForUpdates(){
+     return false;
+   }
+
+   /**
+    * Método responsável por executar as ações do analyzer
+    * @method run
+    * @return boolean
+    */
+   public function run(){
+     return !$this->checkForUpdates() ? $this->sender->run() : $this->parser->run($this);
+   }
+
  }

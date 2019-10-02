@@ -13,4 +13,13 @@
 
  class Sender implements \App\Models\Crontroller\CrontrollerInterface\Job\Sender{
 
+   /**
+    * Método responsável por executar os comandos
+    * @method run
+    * @return boolean
+    */
+   public function run(){
+     return true;
+   }
+   
  }
